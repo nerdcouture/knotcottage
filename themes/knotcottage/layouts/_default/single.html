@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+    <section id="body">
+      <article class="hentry">
+            <header>
+                <h1 class="other-class">{{ .Title }}</h1>
+                <time class="updated" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}" pubdate>{{ .Date.Format "02-01-2006" }}</time>
+            </header>
+        <div class="entry-content">
+            {{ .Content }}
+        </div>
+      </article>
+    </section>
+{{ partial "footer.html" .}}

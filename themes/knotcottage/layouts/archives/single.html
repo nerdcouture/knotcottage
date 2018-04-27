@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+    <section id="body">
+        {{ with .Site.GetPage "section" "posts" }}
+        {{ range .Data.Pages.GroupByDate "2006" }}
+        <article class="hentry">
+            <header>
+                <h1 class="other-class">{{ .Key }}</h1>
+            </header>
+            <div class="entry-content">
+                <ul>
+                {{ range .Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                </ul>
+            </div>
+        </article>
+        {{ end }}
+        {{ end }}
+    </section>
+{{ partial "footer.html" . }}
