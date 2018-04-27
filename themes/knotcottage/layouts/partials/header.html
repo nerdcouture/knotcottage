@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700|Source+Serif+Pro" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
 </head>
@@ -14,10 +14,10 @@
         <nav>
             <input type="checkbox" id="openmenu" name="openmenu" />
             <ul>
-                <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-                <li><a href="/About/">About</a></li>
-                <li><a href="/Archives/">Archives</a></li>
-                <li><a href="/Contact/">Contact</a></li>
+                <li><a href="{{ .Site.BaseURL }}/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/archives/">Archives</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
         </nav>
     </header>

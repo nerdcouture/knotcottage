@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
     <section id="body">
         {{ with .Site.GetPage "section" "posts" }}
-        {{ range .Data.Pages.GroupByDate "2006" }}
+        {{ range .Data.Pages.GroupByDate "2006 January" }}
         <article class="hentry">
             <header>
                 <h1 class="other-class">{{ .Key }}</h1>
@@ -9,7 +9,7 @@
             <div class="entry-content">
                 <ul>
                 {{ range .Pages }}
-                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li><p><a href="{{ .Permalink }}">{{ .Title }}</a></p></li>
                 {{ end }}
                 </ul>
             </div>
