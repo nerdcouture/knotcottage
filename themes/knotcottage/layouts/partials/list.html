@@ -1,13 +1,13 @@
-    <section id="body">
-        {{ range first 8 .Pages }}
+    <section id="body" class="columns">
+        {{ range first 9 .Pages }}
         {{ if eq .Type "posts" }}
-        <article class="hentry">
+        <article class="hentry list">
             <header>
                 <h1 class="other-class">{{ .Title }}</h1>
-                <time class="updated" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}" pubdate>{{ .Date.Format "02-01-2006" }}</time>
+                <time class="updated" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}" pubdate>Published {{ .Date.Format "January 2 2006" }}</time>
             </header>
             <div class="entry-content">
-                <p>{{ .Summary }}<br /><a href="{{ .Permalink }}">Read more.</a></p>
+                <p>{{ .Summary }}<a class="more" href="{{ .Permalink }}">Read more.</a></p>
             </div>
         </article>
         {{ end }}

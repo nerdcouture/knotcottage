@@ -3,9 +3,11 @@ body, html {
     margin: 0;
     padding: 0;
 }
-
+#page {
+    background-color: #fff;
+}
 body {
-    background-color: #d4d8d6;
+    background-color: #3d3f3e; /* d4d8d6 */
     color: #3d3f3e;
     font: 1.0em/1.5 'Source Serif Pro', serif;
 }
@@ -15,6 +17,27 @@ b {
 article {
     margin: 0 0 1.5em 0;
     padding: 0;
+}
+.list {
+    /* Fix for lists */
+    break-inside: avoid-column;
+    position: relative;
+}
+.columns {
+    columns: 3 20em;
+}
+.more {
+/*    background-color: #fff; */
+    background: center left transparent url("/assets/images/fade.svg") repeat-x;
+    background-size: cover;
+    border-bottom: 1px solid #000;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    padding: 3.75em 0 0.75em 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 figure {
     border-bottom: 1px solid #000;
